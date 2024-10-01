@@ -52,9 +52,60 @@
 %
 \section{Research Activities and Outcomes}
 
-\subsection{Research Goals}
+During the first year of my PhD,
+I have been working on the development of innovative models fostering the deployment independence of collective adaptive systems (CAS).
 
-\subsection{Literature Review}
+In particular,
+based on previous work on the pulverisation~\cite{DBLP:journals/iotj/CasadeiFPPSV22,DBLP:journals/fi/CasadeiPPVW20} --
+a modern approach to partition into independent components the execution model of CAS --
+I proposed a practical framework implementing the pulverisation model,
+and extending it to support the dynamic reconfiguration at runtime.
+%
+The proposed framework and the extended model with reconfiguration rules have been validated through a set of experiments,
+showing the feasibility of the approach and the benefits in terms of deployment independence and non-functional properties,
+like cost, power consumption, and performance.
+%
+The results of the experiments have been published in a paper submitted to the journal \emph{Future Generation Computer Systems journal}~\cite{DBLP:journals/fgcs/FarabegoliPCV24}.
+
+Subsequently,
+I have been working on the development of a novel approach to better support the dynamic reconfiguration of CAS based on the pulverisation model:
+pre-defined reconfiguration rules may not be sufficient to cover all possible scenarios,
+and they may lead to suboptimal solutions,
+like oscillator behaviors.
+%
+To address this issue,
+I proposed to shift the perspective from local reconfiguration rules to a global perspective,
+where the system's reconfiguration is expressed by a collective program,
+leveraging \emph{Aggregate Computing}.
+%
+In this contribution,
+I proposed a general pulverisation framework architecture where dynamic components' reconfiguration is captured as a first-class citizen,
+and I proposed a novel (collective) algorithm to balance the system's load during the reconfiguration process.
+%
+The proposed approach has been validated through a set of experiments,
+showing that the proposed algorithm can better adapt to disruptive and changing conditions,
+and it can provide better performance and stability compared to allocations defined a priori.
+%
+The results of the experiments and the proposed approach have been submitted and currently under review to the journal \emph{Internet of Things; Engineering Cyber Physical Human Systems}~\cite{farabegoli4798700dynamic}.
+
+Finally,
+I worked on the development of a novel approach to partition the program specification of CAS into independent functions (or services) to achieve flexible deployment in the \emph{Edge-cloud Continuum}.
+%
+This contribution is orthogonal to the pulverisation model,
+and it aims to provide a more flexible and fine-grained approach to partition the system's program specification.
+%
+The proposed model has been formalised via an operational semantics,
+and properties like self-stabilisation preservation, and deployment independence have been formally proved.
+%
+The new model has been validated through a set of experiments,
+showing empirically that the proposed approach preserves the same functional behavior of the original (monolithic deployed) system,
+and it can provide non-functional benefits in terms of power consumption and performance by paying a small overhead in terms of communication.
+%
+The results of the experiments and the proposed approach have been accepted and presented at the \emph{ACSOS 2024} conference~\cite{DBLP:conf/acsos/FarabegoliFAVE24}.
+
+% \subsection{Research Goals}
+
+% \subsection{Literature Review}
 
 \section{Self Evaluation}
 
@@ -69,28 +120,8 @@
 % BibTeX users should specify bibliography style 'splncs04'.
 % References will then be sorted and formatted in the correct style.
 %
-% \bibliographystyle{splncs04}
-% \bibliography{mybibliography}
-%
-\begin{thebibliography}{8}
-\bibitem{ref_article1}
-Author, F.: Article title. Journal \textbf{2}(5), 99--110 (2016)
+\nocite{*}
+\bibliographystyle{splncs04}
+\bibliography{bibliography}
 
-\bibitem{ref_lncs1}
-Author, F., Author, S.: Title of a proceedings paper. In: Editor,
-F., Editor, S. (eds.) CONFERENCE 2016, LNCS, vol. 9999, pp. 1--13.
-Springer, Heidelberg (2016). \doi{10.10007/1234567890}
-
-\bibitem{ref_book1}
-Author, F., Author, S., Author, T.: Book title. 2nd edn. Publisher,
-Location (1999)
-
-\bibitem{ref_proc1}
-Author, A.-B.: Contribution title. In: 9th International Proceedings
-on Proceedings, pp. 1--2. Publisher, Location (2010)
-
-\bibitem{ref_url1}
-LNCS Homepage, \url{http://www.springer.com/lncs}. Last accessed 4
-Oct 2017
-\end{thebibliography}
 \end{document}
